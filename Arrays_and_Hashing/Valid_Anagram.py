@@ -5,6 +5,17 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        if sorted(s) == sorted(t):
-            return True
-        return False
+
+        if len(s) != len(t):
+            return False
+
+        count = [0] * 26
+        count2 = [0] * 26
+
+        for i in s:
+            count[ord(i) - ord('a')] += 1
+
+        for j in t:
+            count[ord(j) - ord('a')] -= 1
+
+        return count == count2
