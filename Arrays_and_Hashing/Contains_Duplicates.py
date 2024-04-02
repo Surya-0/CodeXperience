@@ -7,3 +7,6 @@ class Solution(object):
                 return True
             s.add(i)
         return False
+
+
+sol = Solution()
