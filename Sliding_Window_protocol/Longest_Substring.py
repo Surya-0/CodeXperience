@@ -1,5 +1,7 @@
+print("lengthOfLongestSubstring")
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
+
         l = 0
         myset = set()
         res = 0
