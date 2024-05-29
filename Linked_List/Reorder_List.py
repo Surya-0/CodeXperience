@@ -4,7 +4,7 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def reorderList(self, head: Optional[ListNode]) -> None:
+    def reorderList(self, head: 'Optional[ListNode]') -> None:
         """
         Do not return anything, modify head in-place instead.
         """
