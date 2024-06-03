@@ -10,10 +10,29 @@ def DFS(root):
         curr = stack.pop()
         print(curr.val)
 
-        if curr.left is not None:
-            stack.append(curr.left)
         if curr.right is not None:
             stack.append(curr.right)
+
+        if curr.left is not None:
+            stack.append(curr.left)
+
+def rec_DFS(root):
+    if root == None:
+        return []
+
+    arr = [root.val]
+    print("hi ",root.val)
+    print("hi left",root.left)
+    left_val = rec_DFS(root.left)
+    print("hi right",root.right)
+    right_val = rec_DFS(root.right)
+    print("The left value is :",left_val)
+    print("The right value is : ",right_val)
+    arr.extend(left_val)
+    arr.extend(right_val)
+    print("The return array is :",arr)
+    return arr
+
 
 
 a = Node(1)
@@ -29,5 +48,7 @@ b.right = e
 c.right = f
 
 DFS(a)
+print("----------------")
+print(rec_DFS(a))
 
 
