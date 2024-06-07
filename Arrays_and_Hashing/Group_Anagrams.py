@@ -11,6 +11,7 @@ def groupAnagrams(strs):
         count = [0] * 26
         for c in string:
             count[ord(c) - ord('a')] += 1
+        print(tuple(count)," ",d[tuple(count)])
         d[tuple(count)].append(string)
 
     return d.values()
