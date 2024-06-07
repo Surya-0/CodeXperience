@@ -9,7 +9,7 @@ class Solution(object):
         for i, num in enumerate(nums):
             if i > 0 and num == nums[i - 1]:
                 continue
-            l, r = i + 1, len(nums) - 1
+            l, r = i + 1, len(nums) - 1 
             while l < r:
                 threesum = num + nums[l] + nums[r]
                 if threesum > 0:
