@@ -24,7 +24,6 @@ class Trie:
             val = self.char_to_int(word[i])
             if not cur.children[val]:
                 cur.children[val] = self.getNode()
-
             cur = cur.children[val]
         cur.EOW = True
 
