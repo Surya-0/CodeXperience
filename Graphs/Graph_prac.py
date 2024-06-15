@@ -92,3 +92,7 @@ print("________________________________________")
 print("DFS done using iterative approach(stack)")
 g.dfs_using_stack(0)
 print(g.res_arr_dfs_2)
+
+arr = [[1,2],[3,4]]
+for i,j in arr:
+    print(i," ",j)
