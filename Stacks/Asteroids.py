@@ -16,3 +16,8 @@ class Solution:
                 stack.append(a)
 
         return stack
+
+
+d = {1: 7, 2: 3, 3: 4, 4: 5, 5: 6}
+k = sorted(d.values(),reverse=True)
+print(k)
