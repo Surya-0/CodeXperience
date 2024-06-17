@@ -85,6 +85,7 @@ g.add_edge(1,3)
 g.add_edge(2,4)
 g.add_edge(2,5)
 
+
 g.dfs(1)
 g.bfs(1)
 topo = g.topological_sort(1)
