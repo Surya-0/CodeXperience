@@ -1,6 +1,6 @@
 class Solution:
     def partitionString(self, s: str) -> int:
-        l = 0
+        # l = 0
         r = 0
         visit = set()
         count = 0
@@ -15,7 +15,7 @@ class Solution:
             else:
                 # res.append(temp)
                 count += 1
-                l = r
+                # l = r
                 visit = set()
                 # temp = ""
 
