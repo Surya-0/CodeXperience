@@ -1,8 +1,8 @@
-""" The canSum function will take a target and a list of numbers and return if it
-is possible to arrive at the target.Now we need to see if memoization is possible i.e., cache the results in
- a data structure. The time complexity of the canSum function is O(n^m) where n is the length of the number array and m is the
- target.The space complexity of the canSum function is O(m).The time complexity of the memoized canSum function is O(m*n) and the
-space complexity of the memoized canSum function is O(m)"""
+""" The canSum function will take a target and a list of numbers and return if it is possible to arrive at the
+target.Now we need to see if memoization is possible i.e., cache the results in a data structure. The time complexity
+of the canSum function is O(n^m) where n is the length of the number array and m is the target.The space complexity
+of the canSum function is O(m).The time complexity of the memoized canSum function is O(m*n) and the space complexity
+of the memoized canSum function is O(m)"""
 
 
 import time
@@ -19,8 +19,8 @@ def canSum_memo(targetsum, nums):
         return False
 
     for num in nums:
-        res = targetsum - num
-        if (canSum_memo(res, nums) == True):
+        rem = targetsum - num
+        if (canSum_memo(rem, nums) == True):
             d[targetsum] = True
             return True
 
@@ -35,8 +35,8 @@ def canSum(targetsum, nums):
         return False
 
     for num in nums:
-        res = targetsum - num
-        if (canSum(res, nums) == True):
+        rem = targetsum - num
+        if (canSum(rem, nums) == True):
             return True
 
     return False
