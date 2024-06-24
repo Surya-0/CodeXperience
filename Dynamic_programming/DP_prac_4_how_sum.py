@@ -1,7 +1,8 @@
 from collections import defaultdict
 
-"""Time complexity of the recursive function is O(n^m*m) where m is the number of elements in the array and n is the 
-target sum.The space complexity is O(m). The time complexity is O(n*m*m) and space complexity is O(m*m)"""
+"""Time complexity of the recursive function is O(n^m*m) where n is the number of elements in the array and m is the 
+target sum.The space complexity is O(m^2). The time complexity for the memoized function is O(n*m*m) and space 
+complexity is O(m*m)"""
 
 
 def howsum(targetSum, numbers):
