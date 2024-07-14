@@ -16,6 +16,9 @@ Input: n = 5, m=4,routes = {{1,5,1},{2,5,7},
 (3,4,6}{3.5.13}},
 Output: 1
 """
+
+# The time complexity will be O(n+m)
+
 from collections import defaultdict, deque
 
 
@@ -24,7 +27,7 @@ def max_cost_route(n, m, routes):
     for u, v, route_dist in routes:
         adList[u].append((v, route_dist))
 
-    print("Adjacency List is : ",adList)
+    print("Adjacency List is : ", adList)
     # Finding the in-degree
     in_degree = defaultdict(int)
 
@@ -35,7 +38,7 @@ def max_cost_route(n, m, routes):
             ele = v[0]
             # print(ele)
             in_degree[ele] += 1
-    print("In degree is : ",in_degree)
+    print("In degree is : ", in_degree)
     # Topological sort
     queue = deque()
     queue.append(1)
@@ -54,8 +57,13 @@ def max_cost_route(n, m, routes):
     return dist[n] if dist[n] != -float('inf') else -1
 
 
-n = 5
-m = 7
-routes = [(1, 2, 9), (1, 3, 10), (1, 4, 2), (1, 5, 6), (2, 4, 14), (2, 5, 2), (4, 5, 11)]
+n1 = 5
+m1 = 7
+routes1 = [(1, 2, 9), (1, 3, 10), (1, 4, 2), (1, 5, 6), (2, 4, 14), (2, 5, 2), (4, 5, 11)]
 
-print("Max cost for the route is : ",max_cost_route(n, m, routes))
+n2 = 5
+m2 = 4
+routes2 = [(1, 5, 1), (2, 5, 7), (3, 4, 6), (3, 5, 13)]
+print("Max cost for the routes 1 is : ", max_cost_route(n1, m1, routes1))
+print()
+print("Max cost for the routes 2 is : ", max_cost_route(n2, m2, routes2))
