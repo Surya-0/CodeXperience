@@ -47,4 +47,4 @@ public:
         }
         return static_cast<int>(res);
     }
-};""""
+};"""

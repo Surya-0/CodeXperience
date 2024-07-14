@@ -21,7 +21,7 @@ Output: 1
 
 from collections import defaultdict, deque
 
-
+# Method : BFS with in-degree
 def max_cost_route(n, m, routes):
     adList = defaultdict(list)
     for u, v, route_dist in routes:
