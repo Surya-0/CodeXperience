@@ -1,4 +1,5 @@
 from typing import List
+import heapq
 
 
 class Solution:
@@ -24,8 +25,8 @@ class Solution:
                 continue
             res += cost
             visit.add(i)
-            for neicost, nei in adj[i]:
+            for nei_cost, nei in adj[i]:
                 if nei not in visit:
-                    heapq.heappush(minheap, [neicost, nei])
+                    heapq.heappush(minheap, [nei_cost, nei])
 
         return res
