@@ -5,7 +5,7 @@ from typing import List
 
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
-        # We need to use Djikstra's algorithm which uses BFS
+        # We need to use Dijkstra's algorithm which uses BFS
         edges = defaultdict(list)
         for u, v, w in times:
             edges[u].append((v, w))
