@@ -2,7 +2,8 @@ from typing import List
 
 
 class Solution:
-    def luckyNumbers(self, matrix: List[List[int]]) -> List[int]:
+    def luckyNumbers(self, matrix:
+    List[List[int]]) -> List[int]:
         row_set = set()
         col_set = set()
         m = len(matrix)
