@@ -1,15 +1,17 @@
 class Solution:
     def mySqrt(self, x: int) -> int:
+        l, r = 0, x
         res = 0
-        for i in range(x + 1):
-            if i * i < x:
-                res = i
+        while l <= r:
+            m = (l + r) // 2
+            if m * m > x:
+                r = m - 1
 
-            elif i * i == x:
-                res = i
-                return res
+            elif m * m < x:
+                res = m
+                l = m + 1
 
             else:
-                return res
+                return m
 
         return res
