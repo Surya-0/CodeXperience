@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
 
     def isPali(self, s, l, r):
@@ -10,7 +13,7 @@ class Solution:
                 return False
         return True
 
-    def partition(self, s: str) -> 'List[List[str]]':
+    def partition(self, s: str) -> List[List[str]]:
         res = []
         part = []
 

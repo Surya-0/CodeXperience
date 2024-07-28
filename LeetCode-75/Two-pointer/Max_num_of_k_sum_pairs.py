@@ -1,6 +1,5 @@
 class Solution:
     def maxOperations(self, nums: 'List[int]', k: int) -> int:
-        temp_set = set()
         res = 0
         nums.sort()
         l = 0
