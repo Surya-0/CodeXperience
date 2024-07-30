@@ -17,6 +17,7 @@ class Solution:
 
             s += str(root.val)
 
+
             if root.left is None and root.right is None:
                 arr_sum[0] += int(s)
 
