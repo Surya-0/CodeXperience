@@ -16,4 +16,20 @@ class Solution(object):
             d[nums[i]] = i
 
 
-
+# C++ solution
+"""
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int,int> d;
+        for(int i =0;i < nums.size();i++){
+            int rem = target - nums[i];
+            if (d.find(rem) != d.end()){
+                return {d[rem],i};
+            }
+            d[nums[i]] = i;
+        }
+        return {};
+    }
+};
+"""
